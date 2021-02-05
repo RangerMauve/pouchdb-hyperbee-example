@@ -1,0 +1,37 @@
+{
+  "name": "pouchdb-hyperbee-example",
+  "version": "1.0.0",
+  "description": "An example web app for loading data from Pouch over p2p.",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -s Example -d -t [ babelify --global ] ./ > bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RangerMauve/pouchdb-hyperbee-example.git"
+  },
+  "keywords": [
+    "pouchdb",
+    "pouch",
+    "p2p",
+    "hypercore"
+  ],
+  "author": "rangermauve <ranger@mauve.moe> (https://mauve.moe/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RangerMauve/pouchdb-hyperbee-example/issues"
+  },
+  "homepage": "https://github.com/RangerMauve/pouchdb-hyperbee-example#readme",
+  "dependencies": {
+    "pouchdb": "^7.2.2",
+    "pouchdb-adapter-hyperbee": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0"
+  }
+}

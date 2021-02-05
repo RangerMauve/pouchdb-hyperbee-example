@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<title>PouchDB Hyperbee Example</title>
+<style>
+  .section {
+    display: block;
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+
+<h1>PouchDB Hyperbee Example</h1>
+
+<section class="section">
+  <h2>
+    What is this?
+  </h2>
+  <p>
+    This is a demo of <a>pouchdb-adapter-hyperbee</a>,
+    it uses the p2p database <a href="https://github.com/hypercore-protocol/hyperbee/">Hyperbee</a> to store changes
+    and enables Pouch to load data as-needed from remote databases instead of needing to fully replicate.
+  </p>
+  <p>
+    This works particularly well when you set up indexes using Pouch's <a href="https://pouchdb.com/guides/mango-queries.html">Mango Queries</a>
+  </p>
+</section>
+
+
+<section id="intro" class="section">
+  <p>
+    First: Do you wish to <button id="enterLoad">Load</button> or <button id="enterShare">Share Something</button>?
+  </p>
+</section>
+
+<form class="section hidden" id="doLoad">
+  <label>
+    Enter A URL to load
+    <input id="url" required>
+  </label>
+  <button>Load</button>
+</form>
+
+<form class="section hidden" id="doShare">
+  <label>
+    Enter a message to share
+    <input id="message" required>
+  </label>
+  <button>Upload</button>
+</form>
+
+<pre>
+  Status: <span id="status" aria-live="polite">Choosing</span>
+</pre>
+
+<pre class="section" id="output"></pre>
+
+<script src="bundle.js"></script>

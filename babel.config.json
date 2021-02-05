@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    ["module-resolver", {
+      "alias": {
+        "sodium-native": "sodium-javascript",
+        "dat-dns": "hyper-sdk/dns-web.js",
+        "hyperswarm": "hyperswarm-web",
+        "util" : "./node_modules/util/util.js",
+        "net": "webnet"
+      }
+    }]
+  ]
+}
